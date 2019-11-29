@@ -1,0 +1,162 @@
+
+==========================================
+========== TEST 1 : The Alphabet =========
+==========================================
+
+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
+|BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBb
+|BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBbCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCc
+|BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBbCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCcDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDd
+|EEEEEEEEEEEEEEEEEEEEEEEEEEEEe
+|EEEEEEEEEEEEEEEEEEEEEEEEEEEEeFFFFFFFFFFFFFFFFFFFFFFFFFFFFf
+|EEEEEEEEEEEEEEEEEEEEEEEEEEEEeFFFFFFFFFFFFFFFFFFFFFFFFFFFFfGGGGGGGGGGGGGGGGGGGGGGGGGGGg
+|HHHHHHHHHHHHHHHHHHHHHHHHHh
+|HHHHHHHHHHHHHHHHHHHHHHHHHhIIIIIIIIIIIIIIIIIIIIIIIIIi
+|HHHHHHHHHHHHHHHHHHHHHHHHHhIIIIIIIIIIIIIIIIIIIIIIIIIiJJJJJJJJJJJJJJJJJJJJJJJJj
+|KKKKKKKKKKKKKKKKKKKKKKk
+|KKKKKKKKKKKKKKKKKKKKKKkLLLLLLLLLLLLLLLLLLLLLLl
+|KKKKKKKKKKKKKKKKKKKKKKkLLLLLLLLLLLLLLLLLLLLLLlMMMMMMMMMMMMMMMMMMMMMm
+|NNNNNNNNNNNNNNNNNNNn
+|NNNNNNNNNNNNNNNNNNNnOOOOOOOOOOOOOOOOOOOo
+|NNNNNNNNNNNNNNNNNNNnOOOOOOOOOOOOOOOOOOOoPPPPPPPPPPPPPPPPPPp
+|QQQQQQQQQQQQQQQQq
+|QQQQQQQQQQQQQQQQqRRRRRRRRRRRRRRRRr
+|QQQQQQQQQQQQQQQQqRRRRRRRRRRRRRRRRrSSSSSSSSSSSSSSSs
+|TTTTTTTTTTTTTt
+|TTTTTTTTTTTTTtUUUUUUUUUUUUUu
+|TTTTTTTTTTTTTtUUUUUUUUUUUUUuVVVVVVVVVVVVv
+|WWWWWWWWWWw
+|WWWWWWWWWWwXXXXXXXXXXx
+|WWWWWWWWWWwXXXXXXXXXXxYYYYYYYYYy
+|ZZZZZZZz
+|ZZZZZZZzAAAAAAAa
+|ZZZZZZZzAAAAAAAaBBBBBBb
+|CCCCc
+|CCCCcDDDDd
+|CCCCcDDDDdEEEe
+|Ff
+|FfGg
+|FfGgh
+|i
+|Jj
+|JjKKKk
+|LLLl
+|MMMMm
+|MMMMmNNNNNNn
+|OOOOOOo
+|PPPPPPPp
+|PPPPPPPpQQQQQQQQQq
+|RRRRRRRRRr
+|SSSSSSSSSSs
+|SSSSSSSSSSsTTTTTTTTTTTTt
+|UUUUUUUUUUUUu
+|VVVVVVVVVVVVVv
+|VVVVVVVVVVVVVvWWWWWWWWWWWWWWWw
+|XXXXXXXXXXXXXXXx
+|YYYYYYYYYYYYYYYYy
+|YYYYYYYYYYYYYYYYyZZZZZZZZZZZZZZZZZZz
+|AAAAAAAAAAAAAAAAAAa
+|BBBBBBBBBBBBBBBBBBBb
+|BBBBBBBBBBBBBBBBBBBbCCCCCCCCCCCCCCCCCCCCCc
+|DDDDDDDDDDDDDDDDDDDDDd
+|EEEEEEEEEEEEEEEEEEEEEEe
+|EEEEEEEEEEEEEEEEEEEEEEeFFFFFFFFFFFFFFFFFFFFFFFFf
+|GGGGGGGGGGGGGGGGGGGGGGGGg
+|HHHHHHHHHHHHHHHHHHHHHHHHHh
+|HHHHHHHHHHHHHHHHHHHHHHHHHhIIIIIIIIIIIIIIIIIIIIIIIIIIIi
+|JJJJJJJJJJJJJJJJJJJJJJJJJJJj
+|KKKKKKKKKKKKKKKKKKKKKKKKKKKKk
+|KKKKKKKKKKKKKKKKKKKKKKKKKKKKkLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLl
+|MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm
+|
+
+Right number of lines
+
+==========================================
+========= TEST 2 : Empty Lines ===========
+==========================================
+
+|NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNnCette ligne se termine par un point.
+| ligne suivante est vide.
+|Les 2 lignes suivantes sont vides
+|Et encore les 2 suivantes.
+|Et encore les 2 suivantes.
+|
+
+Not Good - Wrong Number Of Lines
+
+==========================================
+======== TEST 3 : The Empty File =========
+==========================================
+
+|
+
+Right number of lines
+
+==========================================
+========= TEST 4 : One New Line ==========
+==========================================
+
+|Et encore les 2 suivantes.
+|
+
+Right number of lines
+
+==========================================
+========= TEST 5 : Four New Lines ========
+==========================================
+
+|Et encore les 2 suivantes.
+|
+|
+
+Not Good - Wrong Number Of Lines
+
+==========================================
+============== TEST 6 : 42 ===============
+==========================================
+
+|
+|
+|
+
+Right number of lines
+
+==========================================
+============= TEST 7 : Marge =============
+==========================================
+
+answer to life the universe and everythinanswer to life the universe and everythinganswer to life the universe and everything-   OOOO
+OOOOOOOOO
+OOOOOOOOOO
+OOOOOOOOOOOO
+OOOOOOOOOOOO
+OOOOOOOOOOOO
+OOOOOOOOOOOOO
+OOOOOOOOOOOOOO
+OOOOOOOOOOOOOO OOOOOOOOOOOOOO
+OOOOOOOOOOOOOO
+OOOOOOOOOOOOOO  OOOOOOOOOOOOOO
+   OOOOOOOOOOOOOO
+ OOOOOOOOOOOOOO
+ OOOOOOOOOOOOOO
+ OOOOOOOOOOOOOO
+ OOOOO \_| \_|O
+ OOOO \/  \/  \
+ OOOO (o   )o  )
+  O/c   \__/ --.
+  O\_   ,     -'
+   O|  '\_______)
+   O|  '\_______)     |       _)
+   |      |
+   |      |     oooooooo
+
+
+Right number of lines
+
+==========================================
+========= TEST 8 : Wrong Input ===========
+==========================================
+
+Well Done, you return -1 if no FD
+
