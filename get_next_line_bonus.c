@@ -12,7 +12,6 @@
 
 #include "get_next_line_bonus.h"
 
-
 static int	linea(char **s, char **line)
 {
 	int		len;
@@ -54,7 +53,7 @@ static int	verifica_linea(char **s, char **line, int numbytes, int fd)
 int			get_next_line(int fd, char **line)
 {
 	int			numbytes;
-	static char	*s[1024];
+	static char	*s[0];
 	char		buff[BUFFER_SIZE + 1];
 	char		*tmp;
 

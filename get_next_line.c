@@ -6,12 +6,11 @@
 /*   By: ccardozo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 08:39:28 by ccardozo          #+#    #+#             */
-/*   Updated: 2019/12/05 15:12:40 by ccardozo         ###   ########.fr       */
+/*   Updated: 2019/12/12 14:42:11 by ccardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
 
 static int	linea(char **s, char **line)
 {
@@ -54,11 +53,13 @@ static int	verifica_linea(char **s, char **line, int numbytes, int fd)
 int			get_next_line(int fd, char **line)
 {
 	int			numbytes;
-	static char	*s[1024];
-	char		buff[BUFFER_SIZE + 1];
+	static char	*s[0];
+	char		*buff;
 	char		*tmp;
 
 	if (fd < 0 || !line || !BUFFER_SIZE)
+		return (-1);
+	if (!(buff = malloc(sizeof(char) * (BUFFER_SIZE + 1))))
 		return (-1);
 	while ((numbytes = read(fd, buff, BUFFER_SIZE)) > 0)
 	{
@@ -74,5 +75,6 @@ int			get_next_line(int fd, char **line)
 		if (ft_strchr(s[fd], '\n'))
 			break ;
 	}
+	free (buff);
 	return (verifica_linea(s, line, numbytes, fd));
 }

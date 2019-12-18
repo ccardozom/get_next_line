@@ -24,7 +24,7 @@ size_t		ft_strlen(const char *str)
 	return (i);
 }
 
-char	*ft_strdup(const char *s1)
+char		*ft_strdup(const char *s1)
 {
 	char	*s;
 	int		i;
@@ -87,7 +87,7 @@ char		*ft_strchr(const char *s, int c)
 	return (p);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t			i;
 	char			*str;
