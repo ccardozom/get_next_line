@@ -3,107 +3,108 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccardozo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jgalian- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/03 11:34:40 by ccardozo          #+#    #+#             */
-/*   Updated: 2019/12/05 15:12:49 by ccardozo         ###   ########.fr       */
+/*   Created: 2020/01/14 06:52:17 by jgalian-          #+#    #+#             */
+/*   Updated: 2020/01/14 07:01:17 by jgalian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t		ft_strlen(const char *str)
+size_t		ft_strlen(const char *s)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
+	while (s[i] != '\0')
 		i++;
-	}
 	return (i);
 }
 
 char		*ft_strdup(const char *s1)
 {
-	char	*s;
-	int		i;
+	char	*str1;
+	char	*str2;
+	size_t	i;
 
 	i = 0;
-	while (s1[i] != '\0')
-		i++;
-	s = malloc((i + 1) * sizeof(char));
-	if (!s)
+	str1 = (char *)s1;
+	str2 = (char*)malloc(ft_strlen(str1) + 1);
+	if (str2 == NULL)
 		return (NULL);
-	i = 0;
-	while (s1[i] != '\0')
+	while (str1[i] != '\0')
 	{
-		s[i] = s1[i];
+		str2[i] = str1[i];
 		i++;
 	}
-	s[i] = '\0';
-	return (s);
+	str2[i] = '\0';
+	return (str2);
 }
 
-char		*ft_strjoin(char *s1, char *s2)
+char		*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*joined;
+	char	*str3;
 	int		i;
 	int		j;
 
 	i = 0;
-	if (!(joined = malloc((ft_strlen(s1) + ft_strlen(s2)) + 1)))
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	while (s1[i])
+	if (!(str3 = (char*)malloc(ft_strlen(s1) + ft_strlen(s2) + 1)))
+		return (NULL);
+	while (s1[i] != '\0')
 	{
-		joined[i] = s1[i];
+		str3[i] = s1[i];
 		i++;
 	}
-	joined[i] = '\0';
-	j = ft_strlen(joined);
-	i = 0;
-	while (s2[i] != '\0')
+	j = 0;
+	while (s2[j] != '\0')
 	{
-		joined[i + j] = s2[i];
+		str3[i] = s2[j];
 		i++;
+		j++;
 	}
-	joined[i + j] = '\0';
-	return (joined);
+	str3[i] = '\0';
+	return (str3);
 }
 
 char		*ft_strchr(const char *s, int c)
 {
-	char	*p;
-	int		i;
+	char	*str;
 
-	p = (void *)s;
-	i = 0;
-	while (*p != c)
+	str = (char*)s;
+	while (*str)
 	{
-		if (*p == '\0')
-			return (NULL);
-		p++;
+		if (*str == c)
+			return (str);
+		str++;
 	}
-	return (p);
+	if (*str == '\0' && c == '\0')
+		return (str);
+	return (NULL);
 }
 
 char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t			i;
-	char			*str;
+	char	*str;
+	char	*sub;
+	size_t	i;
 
-	if (!(str = malloc(sizeof(char) * (len + 1))) || !s)
-		return (NULL);
+	str = (char *)s;
 	i = 0;
+	if (str == NULL)
+		return (NULL);
+	if (!(sub = (char *)malloc(len + 1)))
+		return (NULL);
 	if (start < ft_strlen(s))
 	{
-		while (s[start] && i < len)
+		while (str[i] != '\0' && i < len)
 		{
-			str[i] = s[start];
+			sub[i] = str[i + start];
 			i++;
-			start++;
 		}
 	}
-	str[i] = '\0';
-	return (str);
+	sub[i] = '\0';
+	return (sub);
 }
